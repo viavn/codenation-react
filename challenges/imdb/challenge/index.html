@@ -1,113 +1,392 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IMDB - CodeNation Filmes</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
-    />
-  </head>
 
-  <body>
-    <header>
-      <div class="wrapper">
-        <div class="menu">
-          <a href="#">
-            <img src="./assets/logo-imdb.jpg" alt="Logo IMDB" />
-          </a>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Lançamentos</a>
-              </li>
-              <li>
-                <a href="#">Crítica</a>
-              </li>
-              <li>
-                <a href="#">Em Cartaz</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="user">
-            <img src="./assets/walter-white.jpg" alt="Imagem do usuário" />
-            <span>Walter White</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMDB - CodeNation Filmes</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="menu">
+        <a href="#">
+          <img src="./assets/logo-imdb.jpg" alt="Logo IMDB" />
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Lançamentos</a>
+            </li>
+            <li>
+              <a href="#">Crítica</a>
+            </li>
+            <li>
+              <a href="#">Em Cartaz</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user">
+          <img src="./assets/walter-white.jpg" alt="Imagem do usuário" />
+          <span>Walter White</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper movie-details">
+      <h1>Mad Max: Estrada da Fúria</h1>
+
+      <div class="movie-genres">
+        <ul>
+          <li>Aventura</li>
+          <li>Sci-fi</li>
+          <li>Terror</li>
+        </ul>
+      </div>
+
+      <a class="btn-watch-trailer" href="#">
+        <span>Assistir Trailer</span>
+        <i class="fa fa-play-circle-o"></i>
+      </a>
+
+      <div class="movie-date">
+        <p>Nos Cinemas</p>
+        <p>15 de Outubro de 2015 (Brasil)</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrapper movie-list-wrapper">
+    <div class="menu-movie-list">
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Nos cinemas</a>
+          </li>
+          <li>
+            <a href="#">Em breve</a>
+          </li>
+          <li>
+            <a href="#">Bilheteria</a>
+          </li>
+          <li>
+            <a href="#">Séries</a>
+          </li>
+          <li>
+            <a href="#">Trailers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="movie-card-container">
+
+      <!-- 1 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-moonlight.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Moonlight</h2>
+            <i class="fa fa-play"></i>
           </div>
         </div>
-      </div>
 
-      <div class="wrapper movie-details">
-        <h1>Mad Max: Estrada da Fúria</h1>
+        <div class="movie-card-details">
+          <h3>Moonlight</h3>
+          <p>Drama</p>
 
-        <div class="movie-genres">
-          <ul>
-            <li>Aventura</li>
-            <li>Sci-fi</li>
-            <li>Terror</li>
-          </ul>
-        </div>
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
 
-        <a class="btn-watch-trailer" href="#">
-          <span>Assistir Trailer</span>
-          <i class="fa fa-play-circle-o"></i>
-        </a>
-
-        <div class="movie-date">
-          <p>Nos Cinemas</p>
-          <p>15 de Outubro de 2015 (Brasil)</p>
         </div>
       </div>
-    </header>
+      <!-- Fim 1 Card -->
 
-    <section class="wrapper movie-list-wrapper">
-      <div class="menu-movie-list">
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Nos cinemas</a>
-            </li>
-            <li>
-              <a href="#">Em breve</a>
-            </li>
-            <li>
-              <a href="#">Bilheteria</a>
-            </li>
-            <li>
-              <a href="#">Séries</a>
-            </li>
-            <li>
-              <a href="#">Trailers</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </section>
+      <!-- 2 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-bladerunner.jpg');">
 
-    <footer>
-      <div class="wrapper footer-wrapper">
-        <img src="./assets/logo-imdb.jpg" alt="Logo IMDB" />
-        <nav>
-          <ul>
-            <li>
-              <a class="icon-twitter" href="#">
-                <i class="fa fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a class="icon-facebook" href="#">
-                <i class="fa fa-facebook-official"></i>
-              </a>
-            </li>
-            <li>
-              <a class="icon-instagram" href="#">
-                <i class="fa fa-instagram"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
+          <div class="movie-trailer">
+            <h2>Blade Runner</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Blade Runner</h3>
+          <p>Aventura, SCI-FI</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
       </div>
-    </footer>
-  </body>
+      <!-- Fim 2 Card -->
+
+      <!-- 3 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-mad-max.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Max Max</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Max Max</h3>
+          <p>Aventura, SCI-FI, Terror</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 3 Card -->
+
+      <!-- 4 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-alita.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Alita</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Alita</h3>
+          <p>Aventura, SCI-FI</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 4 Card -->
+
+      <!-- 5 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-batman-superman.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Batman vs Superman</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Batman vs Superman</h3>
+          <p>Ação, Drama</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 5 Card -->
+
+      <!-- 6 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-jurassic-world.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Jurassic World</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Jurassic World</h3>
+          <p>Aventura, Terror</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 6 Card -->
+
+      <!-- 7 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-civil-war.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Guerra Civil</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Guerra Civil</h3>
+          <p>Aventura, Ação</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 7 Card -->
+
+      <!-- 8 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-capita-marvel.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Capitã Marvel</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Capitã Marvel</h3>
+          <p>SCI-FI</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>9.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 8 Card -->
+
+      <!-- 9 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-coringa.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Coringa</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Coringa</h3>
+          <p>Suspense, Drama</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>10</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 9 Card -->
+
+      <!-- 10 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-liga-justica.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Liga da Justiça</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Liga da Justiça</h3>
+          <p>Aventura, Ação</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.5</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 10 Card -->
+
+      <!-- 11 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-star-wars.jpg');">
+
+          <div class="movie-trailer">
+            <h2>STAR WARS VII</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>STAR WARS VII</h3>
+          <p>Aventura, SCI-FI</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 11 Card -->
+
+      <!-- 12 Card -->
+      <div class="movie-card">
+        <div class="movie-poster" style="background-image: url('./assets/poster-pantera-negra.jpg');">
+
+          <div class="movie-trailer">
+            <h2>Pantera Negra</h2>
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+
+        <div class="movie-card-details">
+          <h3>Pantera Negra</h3>
+          <p>Aventura, SCI-FI</p>
+
+          <div class="movie-score">
+            <i class="fa fa-heart"></i>
+            <span>7.0</span>
+          </div>
+
+        </div>
+      </div>
+      <!-- Fim 12 Card -->
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrapper footer-wrapper">
+      <img src="./assets/logo-imdb.jpg" alt="Logo IMDB" />
+      <nav>
+        <ul>
+          <li>
+            <a class="icon-twitter" href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="icon-facebook" href="#">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+          <li>
+            <a class="icon-instagram" href="#">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+
 </html>
