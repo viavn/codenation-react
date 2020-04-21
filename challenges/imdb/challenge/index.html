@@ -1,62 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMDB - CodeNation Filmes</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
-</head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="wrapper">
-            <img src="./assets/logo-imdb.jpg" alt="Logo IMDB">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Lançamentos</a>
-                        <a href="#">Crítica</a>
-                        <a href="#">Em Cartaz</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="user">
-                <img src="./assets/walter-white.jpg" alt="Imagem do usuário">
-                <span>Walter White</span>
-            </div>
+      <div class="wrapper">
+        <div class="menu">
+          <a href="#">
+            <img src="./assets/logo-imdb.jpg" alt="Logo IMDB" />
+          </a>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Lançamentos</a>
+              </li>
+              <li>
+                <a href="#">Crítica</a>
+              </li>
+              <li>
+                <a href="#">Em Cartaz</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user">
+            <img src="./assets/walter-white.jpg" alt="Imagem do usuário" />
+            <span>Walter White</span>
+          </div>
         </div>
+      </div>
+
+      <div class="wrapper movie-details">
+        <h1>Mad Max: Estrada da Fúria</h1>
+
+        <div class="movie-genres">
+          <ul>
+            <li>Aventura</li>
+            <li>Sci-fi</li>
+            <li>Terror</li>
+          </ul>
+        </div>
+
+        <a class="btn-watch-trailer" href="#">
+          <span>Assistir Trailer</span>
+          <i class="fa fa-play-circle-o"></i>
+        </a>
+
+        <div class="movie-date">
+          <p>Nos Cinemas</p>
+          <p>15 de Outubro de 2015 (Brasil)</p>
+        </div>
+      </div>
     </header>
 
-    <section class="movie-list-wrapper">
-
+    <section class="wrapper movie-list-wrapper">
+      <div class="menu-movie-list">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Nos cinemas</a>
+            </li>
+            <li>
+              <a href="#">Em breve</a>
+            </li>
+            <li>
+              <a href="#">Bilheteria</a>
+            </li>
+            <li>
+              <a href="#">Séries</a>
+            </li>
+            <li>
+              <a href="#">Trailers</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </section>
 
     <footer>
-        <div class="wrapper footer-wrapper">
-            <img src="./assets/logo-imdb.jpg" alt="Logo IMDB">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook-official"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      <div class="wrapper footer-wrapper">
+        <img src="./assets/logo-imdb.jpg" alt="Logo IMDB" />
+        <nav>
+          <ul>
+            <li>
+              <a class="icon-twitter" href="#">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="icon-facebook" href="#">
+                <i class="fa fa-facebook-official"></i>
+              </a>
+            </li>
+            <li>
+              <a class="icon-instagram" href="#">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
