@@ -5,4 +5,4 @@
 # Aceleração Codenation React
 
 ## 🚀 Desafio 1
-- [x] [Site estático: IMDB](./challenges/imdb/src/README.md)
+- [x] [Site estático: IMDB](./challenges/imdb/README.md)
