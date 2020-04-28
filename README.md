@@ -6,3 +6,6 @@
 
 ## 🚀 Desafio 1
 - [x] [Site estático: IMDB](./challenges/imdb/README.md)
+
+## 🚀 Desafio 2
+- [x] [Mobile First: Instagram](./challenges/instagram/README.md)
