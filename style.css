@@ -1,0 +1,123 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap';
+
+:root {
+  --color-green: #50fa7b;
+  --color-rocket: #7159c1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: #282a36;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+header {
+  padding: 32px;
+  border-bottom: 1px solid #333;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.links {
+  text-align: center;
+}
+
+.links a {
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 16px;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+.links a:hover {
+  transition: color 200ms;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#wrapper {
+  text-align: center;
+  padding: 32px;
+}
+
+#wrapper img {
+  border-radius: 50%;
+  border: 5px solid var(--color-green);
+  margin-bottom: 32px;
+}
+
+#wrapper h1 {
+  font-size: 42px;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+#wrapper h2 {
+  font-size: 24px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+#links-section {
+  margin-top: 8px;
+}
+
+#links-section a {
+  border-bottom: 1px solid var(--color-green);
+}
+
+header .links a:hover,
+#wrapper .links a:hover {
+  color: var(--color-green);
+}
+
+/* ===
+  MAIN
+  === */
+main.content .container {
+  display: flex;
+  border: 2px solid var(--color-rocket);
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 3px 2px 4px 1px rgba(0, 0, 0, 0.7);
+  padding: 16px 0;
+}
+
+.preview {
+  text-align: center;
+}
+
+.preview__link {
+  padding: 8px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.preview__link:hover {
+  border-bottom: 1px solid var(--color-rocket);
+  transition: all 200ms ease-in-out;
+}
+
+.preview__link a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
