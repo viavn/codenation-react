@@ -11,3 +11,6 @@
 
 ## 🚀 Desafio 2
 - [x] Mobile First Instagram [repo](./challenges/instagram/)
+
+## 🚀 Desafio 3
+- [x] Fibonacci usando NodeJS [repo](./challenges/fibonacci/)
