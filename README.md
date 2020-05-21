@@ -14,3 +14,6 @@
 
 ## 🚀 Desafio 3
 - [x] Fibonacci usando NodeJS [repo](./challenges/fibonacci/)
+
+## 🚀 Desafio 4
+- [] Descobrir as promoções aplicadas a um carrinho de compras usando NodeJS [repo](./challenges/shopping-cart/)
