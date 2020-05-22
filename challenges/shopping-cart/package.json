@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "debug": "node --nolazy --inspect-brk=9229 src/start.js",
+    "dev": "node src/start.js",
     "test": "jest test/index.test.js",
     "test:watch": "jest test/index.test.js --watch"
   },
