@@ -13,8 +13,11 @@ class App extends React.Component {
 
     this.state = {
       data: [],
+      oldData: [],
       isLoading: false,
     }
+
+    this.onKeyUp = this.onKeyUp.bind(this)
   }
 
   componentDidMount() {
@@ -22,22 +25,59 @@ class App extends React.Component {
 
     fetch(API_URL)
       .then((response) => response.json())
-      .then((response) => this.setState({ data: response, isLoading: false }))
+      .then((response) =>
+        this.setState({ data: response, oldData: response, isLoading: false })
+      )
   }
 
   sortItems(sortBy) {
-    const mapped = this.state.data.map((element, index) => ({
-      index,
-      value: element[sortBy],
-    }))
+    let result
 
-    const sortedContacts = mapped.sort((a, b) => {
-      return +(a.value > b.value) || +(a.value === b.value) - 1
-    })
+    if (sortBy) {
+      const mapped = this.state.data.map((element, index) => ({
+        index,
+        value: element[sortBy],
+      }))
 
-    const result = sortedContacts.map((el) => this.state.data[el.index])
+      const sortedContacts = mapped.sort((a, b) => {
+        return +(a.value > b.value) || +(a.value === b.value) - 1
+      })
+
+      result = sortedContacts.map((el) => this.state.data[el.index])
+    } else {
+      result = this.state.oldData
+    }
+
     this.setState({
       data: result,
+    })
+  }
+
+  debounceEvent = (fn, wait = 1000, time) => (...args) =>
+    clearTimeout(time, (time = setTimeout(() => fn(...args), wait)))
+
+  onKeyUp(value) {
+    let contacts = this.state.oldData.slice()
+
+    if (!!value) {
+      contacts = contacts.filter((contact) => {
+        let hasFilter = false
+        for (let prop in contact) {
+          if (
+            contact[prop] !== 'avatar' &&
+            contact[prop].toLowerCase().includes(value.toLowerCase())
+          ) {
+            hasFilter = true
+            break
+          }
+        }
+
+        return hasFilter
+      })
+    }
+
+    this.setState({
+      data: contacts,
     })
   }
 
@@ -46,7 +86,10 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Topbar />
-        <Filters handleSort={(sortBy) => this.sortItems(sortBy)} />
+        <Filters
+          handleSort={(sortBy) => this.sortItems(sortBy)}
+          handleKeyUp={this.debounceEvent(this.onKeyUp, 500)}
+        />
         <Contacts contacts={data} isLoading={isLoading} />
       </React.Fragment>
     )

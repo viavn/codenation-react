@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
+import SortButton from './SortButton'
 
-class Filters extends React.Component {
+class Filters extends Component {
   render() {
     return (
       <div className="container">
@@ -10,6 +11,7 @@ class Filters extends React.Component {
               type="text"
               className="filters__search__input"
               placeholder="Pesquisar"
+              onKeyUp={(event) => this.props.handleKeyUp(event.target.value)}
             />
 
             <button className="filters__search__icon">
@@ -17,29 +19,31 @@ class Filters extends React.Component {
             </button>
           </div>
 
-          <button
-            className="filters__item is-selected"
+          <SortButton
+            description="Nome"
+            handleSort={this.props.handleSort}
             id="name"
-            onClick={() => this.props.handleSort('name')}
-          >
-            Nome <i className="fas fa-sort-down" />
-          </button>
-
-          <button className="filters__item" id="country">
-            País <i className="fas fa-sort-down" />
-          </button>
-
-          <button className="filters__item" id="company">
-            Empresa <i className="fas fa-sort-down" />
-          </button>
-
-          <button className="filters__item" id="department">
-            Departamento <i className="fas fa-sort-down" />
-          </button>
-
-          <button className="filters__item" id="admissionDate">
-            Data de admissão <i className="fas fa-sort-down" />
-          </button>
+          />
+          <SortButton
+            description="País"
+            handleSort={this.props.handleSort}
+            id="country"
+          />
+          <SortButton
+            description="Empresa"
+            handleSort={this.props.handleSort}
+            id="company"
+          />
+          <SortButton
+            description="Departamento"
+            handleSort={this.props.handleSort}
+            id="department"
+          />
+          <SortButton
+            description="Data de admissão"
+            handleSort={this.props.handleSort}
+            id="admissionDate"
+          />
         </section>
       </div>
     )
