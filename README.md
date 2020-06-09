@@ -19,4 +19,7 @@
 - [x] Descobrir as promoções aplicadas a um carrinho de compras usando NodeJS [repo](./challenges/shopping-cart/)
 
 ## 🚀 Desafio 5
-- [ ] SPA: App de Contatos - PARTE 1 [repo](./challenges/contacts/)
+- [x] SPA: App de Contatos - PARTE 1 [repo](./challenges/contacts/)
+
+## 🚀 Desafio 6
+- [x] SPA: App de Contatos - PARTE 2 [repo](./challenges/contacts-part-2/react-14/)
