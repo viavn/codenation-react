@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+  font-weight: bold;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 8px 16px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
