@@ -8,11 +8,9 @@ import NewUserRoute from './NewUserRoute';
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/">
+    <Route exact path="/" children={<FeedRoute />} />
 
-    </Route>
-
-    <Route exact path="/users">
+    {/* <Route exact path="/users">
 
     </Route>
 
@@ -22,7 +20,7 @@ const Routes = () => (
 
     <Route path="/newuser">
 
-    </Route>
+    </Route> */}
   </Switch>
 );
 

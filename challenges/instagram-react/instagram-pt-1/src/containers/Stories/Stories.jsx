@@ -1,22 +1,26 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 import Story from '../../components/Story';
 
 import './Stories.scss';
 
-const Stories = ({ stories, getUserHandler }) => {
-  return (
-    <React.Fragment>
-      <section className="stories">
-        <div className="container">
-        </div>
-      </section>
+// const Stories = ({ stories, getUserHandler }) => {
+//   return (
+//     <React.Fragment>
+//       <section className="stories">
+//         <div className="container">
+//         </div>
+//       </section>
 
-      {showStory && (
-        <Story />
-        )}
-    </React.Fragment>
-  );
+//       {showStory && (
+//         <Story />
+//         )}
+//     </React.Fragment>
+//   );
+// };
+
+const Stories = () => {
+  return <div />;
 };
 
 export default Stories;
