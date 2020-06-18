@@ -9,10 +9,12 @@ import './FeedRoute.scss';
 
 const BASE_URL = 'https://5e7d0266a917d70016684219.mockapi.io/api/v1';
 const URL_USERS = `${BASE_URL}/users`;
+const URL_STORIES = `${BASE_URL}/stories`;
 
 const FeedRoute = () => {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
+  const [stories, setStories] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -35,7 +37,25 @@ const FeedRoute = () => {
       });
     };
 
+    const fetchStories = async () => {
+      // const response = await fetch(URL_STORIES);
+      // const data = await response.json();
+      // setStories(data);
+
+      Promise.resolve([
+        {
+          id: '1',
+          userId: '1',
+          videoUrl:
+            'https://viniciusvinna.netlify.app/assets/api-instagram/profiles/black-panther/black-panther-stories.mp4',
+        },
+      ]).then((value) => {
+        setStories(value);
+      });
+    };
+
     fetchUsers();
+    fetchStories();
   }, []);
 
   useEffect(() => {
@@ -104,7 +124,7 @@ const FeedRoute = () => {
     fetchPosts();
   }, [users]);
 
-  const getUserHandler = (userId) => {
+  const userHandler = (userId) => {
     const user = users.find(
       (user) => parseInt(user.id, 10) === parseInt(userId, 10)
     );
@@ -113,13 +133,15 @@ const FeedRoute = () => {
   };
 
   return (
-    <div className="feed">
-      {/* <Stories /> */}
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <Posts posts={posts} getUserHandler={getUserHandler} />
-      )}
+    <div data-testid="feed-route">
+      <Stories stories={stories} getUserHandler={userHandler} />
+      <div className="feed">
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <Posts posts={posts} getUserHandler={userHandler} />
+        )}
+      </div>
     </div>
   );
 };

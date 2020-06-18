@@ -8,7 +8,7 @@ import Routes from '../../routes';
 import './App.scss';
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter data-testid="app">
     <Topbar />
     <Routes />
   </BrowserRouter>
