@@ -8,7 +8,7 @@ const User = ({ infoUser }) => {
   return (
     <article className="post" data-testid="user">
       <header className="post__header">
-        <Link className="user" to={`/user/${username}`}>
+        <Link className="user" to={`/users/${username}`}>
           <div className="user__thumb">
             <img src={avatar} alt={`Foto do usuário ${name}`} />
           </div>

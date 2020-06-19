@@ -12,9 +12,7 @@ const Routes = () => (
 
     <Route exact path="/users" children={<UsersRoute />} />
 
-    {/* <Route path="/users/:username">
-
-    </Route> */}
+    <Route path="/users/:username" children={<ProfileRoute />} />
 
     {/* <Route path="/newuser">
 
