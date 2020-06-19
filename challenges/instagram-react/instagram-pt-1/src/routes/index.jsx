@@ -10,15 +10,13 @@ const Routes = () => (
   <Switch>
     <Route exact path="/" children={<FeedRoute />} />
 
-    {/* <Route exact path="/users">
+    <Route exact path="/users" children={<UsersRoute />} />
 
-    </Route>
+    {/* <Route path="/users/:username">
 
-    <Route path="/users/:username">
+    </Route> */}
 
-    </Route>
-
-    <Route path="/newuser">
+    {/* <Route path="/newuser">
 
     </Route> */}
   </Switch>

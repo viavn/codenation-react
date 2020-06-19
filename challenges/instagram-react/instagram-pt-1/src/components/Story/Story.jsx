@@ -20,7 +20,7 @@ const Story = ({ story, user, handleClose }) => {
   }, [videoDuration, playingTime]);
 
   return (
-    <section className="story">
+    <section className="story" data-testid="story">
       <div className="container">
         {/* BEGIN STORY HEADER */}
         <header className="story__header">

@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Story from '../../components/Story';
 
 import './Stories.scss';
-import { func } from 'prop-types';
 
 const Stories = ({ stories, getUserHandler }) => {
   const [showStory, setShowStory] = useState(false);
@@ -24,7 +23,7 @@ const Stories = ({ stories, getUserHandler }) => {
 
   return (
     <React.Fragment>
-      <section className="stories">
+      <section className="stories" data-testid="stories">
         <div className="container">
           {stories.map((story, index) => {
             const userInfo = getUserHandler(story.userId);
