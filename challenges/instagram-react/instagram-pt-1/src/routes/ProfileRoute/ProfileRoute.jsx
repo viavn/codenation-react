@@ -12,7 +12,7 @@ const URL_USERS = `${BASE_URL}/users`;
 const ProfileRoute = () => {
   const { username } = useParams();
   const [user, setUser] = useState(null);
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {

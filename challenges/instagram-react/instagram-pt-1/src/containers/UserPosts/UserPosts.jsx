@@ -6,7 +6,7 @@ import './UserPosts.scss';
 
 const UserPosts = ({ posts }) => (
   <div className="container">
-    {posts && posts.length ? (
+    {posts ? (
       <div className="user-posts" data-testid="user-posts">
         {posts.map((post) => (
           <Post key={post.id} postInfo={post} userInfo={null} />

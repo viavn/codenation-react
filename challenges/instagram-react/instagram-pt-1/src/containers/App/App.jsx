@@ -7,9 +7,11 @@ import Topbar from '../../components/Topbar';
 import './App.scss';
 
 const App = () => (
-  <BrowserRouter data-testid="app">
-    <Topbar />
-    <Routes />
+  <BrowserRouter>
+    <div data-testid="app">
+      <Topbar />
+      <Routes />
+    </div>
   </BrowserRouter>
 );
 

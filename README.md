@@ -25,4 +25,4 @@
 - [x] SPA: App de Contatos - PARTE 2 [repo](./challenges/contacts/contacts-part-2/)
 
 ## Desafio 7 🚀
-- [ in progress ] Instadev React SPA (Parte 1) [repo](./challenges/instagram-react/instagram-pt-1/)
+- [x] Instadev React SPA (Parte 1) [repo](./challenges/instagram-react/instagram-pt-1/)

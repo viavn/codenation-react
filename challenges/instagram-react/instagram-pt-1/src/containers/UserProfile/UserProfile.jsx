@@ -6,13 +6,12 @@ const defaultUser = {
   name: 'John Doe',
   username: 'johndoe',
   email: 'johndoe@gmail.com',
-  avatar:
-    'https://source.unsplash.com/collection/895539/500x500',
+  avatar: 'https://source.unsplash.com/collection/895539/500x500',
 };
 
 const UserProfile = ({ avatar, name, username }) => {
   return (
-    <section className="profile" data-testid="profile">
+    <section className="profile" data-testid="user-profile">
       <div className="container">
         <div className="profile-data">
           <div className="user">
