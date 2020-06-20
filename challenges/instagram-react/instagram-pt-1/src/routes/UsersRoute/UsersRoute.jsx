@@ -10,24 +10,24 @@ const UsersRoute = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      // const response = await fetch(URL_USERS);
-      // const data = await response.json();
-      // setUsers(data);
+      const response = await fetch(URL_USERS);
+      const data = await response.json();
+      setUsers(data);
 
-      const resp = await Promise.resolve([
-        {
-          avatar:
-            'https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg',
-          email: 'blackpanther@gmail.com',
-          id: '1',
-          name: "T'Challa",
-          username: 'blackpanther',
-        },
-      ]);
+      // const resp = await Promise.resolve([
+      //   {
+      //     avatar:
+      //       'https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg',
+      //     email: 'blackpanther@gmail.com',
+      //     id: '1',
+      //     name: "T'Challa",
+      //     username: 'blackpanther',
+      //   },
+      // ]);
 
-      setTimeout(() => {
-        setUsers(resp);
-      }, 1000);
+      // setTimeout(() => {
+      //   setUsers(resp);
+      // }, 1000);
     };
 
     fetchUsers();

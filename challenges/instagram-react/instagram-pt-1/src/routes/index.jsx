@@ -14,9 +14,7 @@ const Routes = () => (
 
     <Route path="/users/:username" children={<ProfileRoute />} />
 
-    {/* <Route path="/newuser">
-
-    </Route> */}
+    <Route path="/newuser" children={<NewUserRoute />} />
   </Switch>
 );
 
