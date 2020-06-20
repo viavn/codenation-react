@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, createContext, useState } from 'react';
 import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
+
+import { getData } from './fake-api';
 
 import Details from './Details';
 
+export const HomeContext = createContext();
+
 const Home = () => {
   let routeMatch = useRouteMatch();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData().then((value) => {
+      console.log(value);
+      setData(value);
+    });
+  }, []);
 
   return (
-    <div>
+    <>
       <h1>
         This is <strong>Home page</strong>
       </h1>
@@ -22,12 +34,14 @@ const Home = () => {
           </li>
         </ul>
       </nav>
-      <Switch>
-        <Route path={`${routeMatch.path}/:id`}>
-          <Details />
-        </Route>
-      </Switch>
-    </div>
+      <HomeContext.Provider value={data}>
+        <Switch>
+          <Route path={`${routeMatch.path}/:id`}>
+            <Details />
+          </Route>
+        </Switch>
+      </HomeContext.Provider>
+    </>
   );
 };
 
