@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './Post.scss';
 
 const Post = ({ postInfo, userInfo }) => {
-  const { name, avatar, username } = userInfo;
   const { imageUrl, comments } = postInfo;
 
   const [isFollowing, setIsFollowing] = useState(false);
@@ -43,48 +42,58 @@ const Post = ({ postInfo, userInfo }) => {
   return (
     <article className="post" data-testid="post">
       {/* BEGIN HEADER */}
-      <header className="post__header">
-        <div className="user">
-          <Link className="user__thumb" to={`/users/${username}`}>
-            <img src={avatar} alt={`Foto do usuário ${name}`} />
-          </Link>
-          <Link className="user__name" to={`/users/${username}`}>
-            {name}
-          </Link>
-        </div>
-        <button
-          type="button"
-          className="post__context"
-          onClick={handleFollowClick}
-        >
-          <span className={`follow-btn ${isFollowing ? 'is-following' : ''}`}>
-            {isFollowing ? 'Seguindo' : 'Seguir'}
-          </span>
-        </button>
-      </header>
+      {userInfo && (
+        <header className="post__header">
+          <div className="user">
+            <Link className="user__thumb" to={`/users/${userInfo.username}`}>
+              <img
+                src={userInfo.avatar}
+                alt={`Foto do usuário ${userInfo.name}`}
+              />
+            </Link>
+            <Link className="user__name" to={`/users/${userInfo.username}`}>
+              {userInfo.name}
+            </Link>
+          </div>
+          <button
+            type="button"
+            className="post__context"
+            onClick={handleFollowClick}
+          >
+            <span className={`follow-btn ${isFollowing ? 'is-following' : ''}`}>
+              {isFollowing ? 'Seguindo' : 'Seguir'}
+            </span>
+          </button>
+        </header>
+      )}
       {/* END HEADER */}
 
       {/* BEGIN POST IMAGE */}
       <figure className="post__figure">
-        <img src={imageUrl} alt={`Publicação do usuário ${name}`} />
+        <img
+          src={imageUrl}
+          alt={`Publicação do usuário ${(userInfo && userInfo.name) || ''}`}
+        />
       </figure>
       {/* END POST IMAGE */}
 
       {/* BEGIN CONTROLS */}
-      <footer className="post__controls">
-        <button className="post__control" onClick={handleLike}>
-          <i
-            aria-hidden="true"
-            className={`${liked ? 'fas' : 'far'} fa-heart`}
-          ></i>
-        </button>
+      {userInfo && (
+        <footer className="post__controls">
+          <button className="post__control" onClick={handleLike}>
+            <i
+              aria-hidden="true"
+              className={`${liked ? 'fas' : 'far'} fa-heart`}
+            ></i>
+          </button>
 
-        <div className="post__status">
-          <div className="user">
-            <span>{getPostCommentText()}</span>
+          <div className="post__status">
+            <div className="user">
+              <span>{getPostCommentText()}</span>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      )}
       {/* END CONTROLS */}
     </article>
   );

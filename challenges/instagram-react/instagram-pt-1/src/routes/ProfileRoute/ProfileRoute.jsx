@@ -51,10 +51,41 @@ const ProfileRoute = () => {
   useEffect(() => {
     const fetchUserPosts = async () => {
       if (user) {
-        const response = await fetch(`${URL_USERS}/${user.id}/posts`);
-        const data = await response.json();
+        // const response = await fetch(`${URL_USERS}/${user.id}/posts`);
+        // const data = await response.json();
+        // setPosts(data);
 
-        setPosts(data);
+        Promise.resolve([
+          {
+            id: '1',
+            imageUrl:
+              'https://i.ibb.co/HGhF4qd/Screen-Shot-2020-06-04-at-18-10-13.png',
+            userId: '1',
+            likes: [{ id: '1', postId: '1' }],
+            comments: [
+              {
+                avatar:
+                  'https://s3.amazonaws.com/uifaces/faces/twitter/yayteejay/128.jpg',
+                comment:
+                  "programming the transmitter won't do anything, we need to override the back-end PNG bus!",
+                createdAt: '2020-03-27T00:58:06.401Z',
+                id: '1',
+                name: 'Santino Rowe',
+                postId: '1',
+              },
+              {
+                avatar:
+                  'https://s3.amazonaws.com/uifaces/faces/twitter/kosmar/128.jpg',
+                comment:
+                  "I'll navigate the digital SCSI matrix, that should protocol the SAS pixel!",
+                createdAt: '2020-03-27T04:04:36.486Z',
+                id: '31',
+                name: 'Virginia Kshlerin',
+                postId: '1',
+              },
+            ],
+          },
+        ]).then((v) => setPosts(v));
       }
     };
 
@@ -66,7 +97,7 @@ const ProfileRoute = () => {
       {user ? (
         <>
           <UserProfile {...user} />
-          <UserPosts />
+          <UserPosts posts={posts} />
         </>
       ) : (
         <Loading />
